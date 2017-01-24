@@ -31,12 +31,12 @@ def test_bubblesort():
     x = np.array([1, 2, 4, 0, 1])
     # for now, just attempt to call the bubblesort function, should
     # actually check output
-    assert algs.bubblesort(test1) == [-1, -1, 0, 1, 2, 3, 7, 8]
-    assert algs.bubblesort(test2) == [2, 3, 3, 6, 8]
-    assert algs.bubblesort(err2) == []
-    assert algs.bubblesort(err3) == [1, 2, 3, 4, 5]
-    assert algs.bubblesort(err4) == [1]
-    assert algs.bubblesort(x) == [0, 1, 1, 2, 4]
+    assert np.array_equal(algs.bubblesort(test1), [-1, -1, 0, 1, 2, 3, 7, 8])
+    assert np.array_equal(algs.bubblesort(test2), [2, 3, 3, 6, 8])
+    assert np.array_equal(algs.bubblesort(err2), [])
+    assert np.array_equal(algs.bubblesort(err3), [1, 2, 3, 4, 5])
+    assert np.array_equal(algs.bubblesort(err4), [1])
+    assert np.array_equal(algs.bubblesort(x), [0, 1, 1, 2, 4])
 
 
 def test_quicksort():
@@ -44,9 +44,9 @@ def test_quicksort():
     x = np.array([1, 2, 4, 0, 1])
     # for now, just attempt to call the quicksort function, should
     # actually check output
-    assert algs.quicksort(test1) == [-1, -1, 0, 1, 2, 3, 7, 8]
-    assert algs.bubblesort(test2) == [2, 3, 3, 6, 8]
-    assert algs.quicksort(err2) == []
-    assert algs.quicksort(err3) == [1, 2, 3, 4, 5]
-    assert algs.quicksort(err4) == [1]
-    assert algs.quicksort(x) == [0, 1, 1, 2, 4]
+    assert np.array_equal(algs.quicksort(test1), [-1, -1, 0, 1, 2, 3, 7, 8])
+    assert np.array_equal(algs.bubblesort(test2), [2, 3, 3, 6, 8])
+    assert np.array_equal(algs.quicksort(err2), [])
+    assert np.array_equal(algs.quicksort(err3), [1, 2, 3, 4, 5])
+    assert np.array_equal(algs.quicksort(err4), [1])
+    assert np.array_equal(algs.quicksort(x), [0, 1, 1, 2, 4])
