@@ -110,19 +110,3 @@ def quicksort(x):
 # plt.axhline(np.asarray(to_plot).mean())
 # plt.show()
 # plt.close()
-
-test1 = [7, 3, 2, 8, 1, -1, 0, -1]
-test2 = [8, 2, 6, 3, 3]
-err2 = []
-err3 = [1, 2, 3, 4, 5]
-err4 = [1]
-assert bubblesort(test1) == [-1, -1, 0, 1, 2, 3, 7, 8]
-assert bubblesort(test2) == [2, 3, 3, 6, 8]
-assert bubblesort(err2) == []
-assert bubblesort(err3) == [1, 2, 3, 4, 5]
-assert bubblesort(err4) == [1]
-assert quicksort(test1) == [-1, -1, 0, 1, 2, 3, 7, 8]
-assert bubblesort(test2) == [2, 3, 3, 6, 8]
-assert quicksort(err2) == []
-assert quicksort(err3) == [1, 2, 3, 4, 5]
-assert quicksort(err4) == [1]
